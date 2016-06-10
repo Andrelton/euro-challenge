@@ -15,6 +15,9 @@ gem 'rake'
 
 gem 'shotgun'
 
+gem 'httparty'
+gem 'dotenv'
+
 group :test do
   gem 'database_cleaner', '~> 1.4.1'
   gem 'shoulda-matchers'
@@ -26,4 +29,5 @@ end
 group :test, :development do
   gem 'factory_girl'
   gem 'faker'
+  gem 'pry-byebug'
 end
