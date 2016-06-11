@@ -1,3 +1,20 @@
 img {
   height: 1em;
 }
+
+div.owner {
+  margin-top: 1em;
+  padding: 0.5em;
+  padding-left: 2em;
+  background-color: silver;
+  width: 50%;
+}
+
+ol {
+  padding: 0em;
+}
+
+.num {
+  text-align: center;
+  padding-left: 5em;
+}

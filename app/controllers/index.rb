@@ -8,6 +8,6 @@ get '/' do
   end
 
   @owners = Owner.make_owners(teams)
-
+  @owners = @owners.sort_by { |owner| owner.points }.reverse
   erb :table
 end

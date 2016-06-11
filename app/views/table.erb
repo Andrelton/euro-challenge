@@ -1,14 +1,26 @@
-<% @owners.each do |owner| %>
-  <p>
-    <%= owner.name %>
-  </p>
-  <table>
-    <% owner.countries.each do |team| %>
-      <tr>
-        <td><img src="<%= team.flag %>"></td>
-        <td><%= team.name %></td>
-        <td><%= team.points %></td>
-      </tr>
-    <% end %>
-  </table>
-<% end %>
+<ol>
+  <% @owners.each do |owner| %>
+    <div class="owner">
+      <li>
+        <strong><%= owner.name %></strong> -- <%= owner.points %> PTS
+        <table>
+          <tr>
+            <th></th>
+            <th>Country</th>
+            <th class="num">Plyd</th>
+            <th class="num">Points</th>
+          </tr>
+          <% owner.countries.each do |team| %>
+
+            <tr>
+              <td><img src="<%= team.flag %>"></td>
+              <td><%= team.name %></td>
+              <td class="num"><%= team.played %></td>
+              <td class="num"><strong><%= team.points %></strong></td>
+            </tr>
+          <% end %>
+        </table>
+      </li>
+    </div>
+  <% end %>
+</ol>

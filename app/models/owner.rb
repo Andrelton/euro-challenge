@@ -1,9 +1,10 @@
 class Owner
   attr_reader :name, :countries
+  attr_accessor :points
 
   OWNERS = {
-    "Brad" => ["France", "Albania"],
     "Nick" => ["Germany", "Republic of Ireland"],
+    "Brad" => ["France", "Albania"],
     "Luke" => ["Spain", "Iceland"],
     "Mark" => ["England", "Slovakia"],
     "Rik" => ["Belgium", "Romania"],
@@ -22,7 +23,9 @@ class Owner
     OWNERS.each do |name, countries|
       owner = self.new(name)
       countries.each do |country|
-        owner.countries << teams[country]
+        team = teams[country]
+        owner.countries << team
+        owner.points += team.points
       end
       owners_array << owner
     end
@@ -32,5 +35,6 @@ class Owner
   def initialize(name)
     @name = name
     @countries = []
+    @points = 0
   end
 end
