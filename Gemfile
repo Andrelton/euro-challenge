@@ -2,14 +2,14 @@ source 'https://rubygems.org'
 
 ruby '2.0.0'
 # PostgreSQL driver
-# gem 'pg'
+gem 'pg'
 
 # Sinatra driver
 gem 'sinatra'
 gem 'sinatra-contrib'
 
-# gem 'activesupport'
-# gem 'activerecord'
+gem 'activesupport'
+gem 'activerecord'
 # gem 'bcrypt-ruby'
 
 gem 'rake'
