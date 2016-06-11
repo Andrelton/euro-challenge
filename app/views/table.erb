@@ -1,26 +1,31 @@
-<ol>
-  <% @owners.each do |owner| %>
-    <div class="owner">
-      <li>
-        <strong><%= owner.name %></strong> - <%= owner.points %> PTS
-        <table>
-          <tr>
-            <th></th>
-            <th>Country</th>
-            <th class="num">Plyd</th>
-            <th class="num">Points</th>
-          </tr>
-          <% owner.countries.each do |team| %>
-
+<div class="main">
+  <h1>
+    Kings of Rochester EURO 2016
+  </h1>
+  <ol>
+    <% @owners.each do |owner| %>
+      <div class="owner">
+        <li>
+          <strong><%= owner.name %></strong> - <%= owner.points %> PTS
+          <table>
             <tr>
-              <td><img src="<%= team.flag %>"></td>
-              <td><%= team.name %></td>
-              <td class="num"><%= team.played %></td>
-              <td class="num"><strong><%= team.points %></strong></td>
+              <th></th>
+              <th>Country</th>
+              <th class="num">Plyd</th>
+              <th class="num">Points</th>
             </tr>
-          <% end %>
-        </table>
-      </li>
-    </div>
-  <% end %>
-</ol>
+            <% owner.countries.each do |team| %>
+
+              <tr>
+                <td class="flag"><img src="<%= team.flag %>"></td>
+                <td class="country"><%= team.name %></td>
+                <td class="num"><%= team.played %></td>
+                <td class="num"><strong><%= team.points %></strong></td>
+              </tr>
+            <% end %>
+          </table>
+        </li>
+      </div>
+    <% end %>
+  </ol>
+</div>

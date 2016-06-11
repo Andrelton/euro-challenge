@@ -3,11 +3,10 @@ img {
 }
 
 div.owner {
-  margin-top: 1em;
-  padding: 0.5em;
+  margin-top: 0.5em;
   padding-left: 2em;
-  /*background-color: silver;*/
-  width: 50%;
+  padding-top: 0.5em;
+  background-color: #E0EBEB;
 }
 
 ol {
@@ -17,4 +16,26 @@ ol {
 .num {
   text-align: center;
   padding-left: 5em;
+}
+
+td.flag {
+  width: 2em;
+  text-align: right;
+}
+
+td.country {
+  width: 10em;
+}
+
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 0.8em;
+}
+
+div.main {
+  display: inline-block;
+}
+
+h1 {
+  text-align: center;
 }
