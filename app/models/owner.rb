@@ -17,8 +17,6 @@ class Owner
   }
 
   def self.make_owners(teams)
-    # owners = %W[Brad Nick Luke Mark Rik Dean Matt Koss Klocke Eric John]
-    # owners.map { |owner| self.new(owner)}
     owners_array = []
     OWNERS.each do |name, countries|
       owner = self.new(name)
