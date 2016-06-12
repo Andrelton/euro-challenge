@@ -7,10 +7,12 @@ div.owner {
   padding-left: 2em;
   padding-top: 0.5em;
   background-color: #E0EBEB;
+  width: 100%;
 }
 
 ol {
   padding: 0em;
+  width: 100%;
 }
 
 .num {
@@ -33,9 +35,15 @@ body {
 }
 
 div.main {
-  display: inline-block;
+  width: 35%;
 }
 
 h1 {
   text-align: center;
 }
+
+/*div {
+  border: 1px dotted red;
+}
+*/
+
