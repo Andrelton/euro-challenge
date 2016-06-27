@@ -4,10 +4,10 @@ Wales,4,9
 Germany,4,10
 Republic of Ireland,4,4
 Spain,4,6
-Iceland,3,5
+Iceland,4,8
 Croatia,4,7
 France,4,10
-England,3,5
+England,4,5
 Slovakia,4,4
 Poland,4,10
 Belgium,4,9
