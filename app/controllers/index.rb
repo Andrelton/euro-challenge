@@ -4,7 +4,6 @@ get '/' do
   file_client = FileClient.new
   csv_euro_points = file_client.get_euro_points
   eliminated_teams = file_client.get_euro_losers
-  binding.pry
 
   teams = {}
   euro_api_data.each do |team_hash|
