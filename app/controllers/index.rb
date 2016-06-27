@@ -1,10 +1,18 @@
 get '/' do
-  football_data_client = FootballData.new
-  euro_data = football_data_client.get_euro_data
+  euro_api_data = FootballData.new.get_euro_data
+
+  csv_euro_points = FileClient.new.get_euro_points
 
   teams = {}
-  euro_data.each do |team_hash|
-    teams[team_hash['team']] = Team.new(team_hash)
+  euro_api_data.each do |team_hash|
+    new_team = Team.new(team_hash)
+
+    updated_info = csv_euro_points[new_team.name]
+    if updated_info
+      new_team.played = updated_info[0]
+      new_team.points = updated_info[1]
+    end
+    teams[team_hash['team']] = new_team
   end
 
   @owners = Owner.make_owners(teams)
@@ -13,5 +21,6 @@ get '/' do
 end
 
 get '/test' do
-  FileClient.new.test
+  points = FileClient.new.get_euro_points
+  points.inspect
 end

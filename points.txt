@@ -1,1 +1,15 @@
-Germany, 10
+COUNTRY, PLAYED, POINTS
+Italy,3,6
+Wales,4,9
+Germany,4,10
+Republic of Ireland,4,4
+Spain,3,6
+Iceland,3,5
+Croatia,4,7
+France,4,10
+England,3,5
+Slovakia,4,4
+Poland,4,10
+Belgium,4,9
+Switzerland,4,5
+Portugal,4,6
