@@ -1,7 +1,10 @@
 get '/' do
   euro_api_data = FootballData.new.get_euro_data
 
-  csv_euro_points = FileClient.new.get_euro_points
+  file_client = FileClient.new
+  csv_euro_points = file_client.get_euro_points
+  eliminated_teams = file_client.get_euro_losers
+  binding.pry
 
   teams = {}
   euro_api_data.each do |team_hash|
@@ -12,6 +15,9 @@ get '/' do
       new_team.played = updated_info[0]
       new_team.points = updated_info[1]
     end
+    if eliminated_teams.include?(new_team.name)
+      new_team.eliminated = true
+    end
     teams[team_hash['team']] = new_team
   end
 
@@ -21,6 +27,6 @@ get '/' do
 end
 
 get '/test' do
-  points = FileClient.new.get_euro_points
-  points.inspect
+  losers = FileClient.new.get_euro_losers
+  losers.inspect
 end

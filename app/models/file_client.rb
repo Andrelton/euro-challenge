@@ -13,4 +13,13 @@ class FileClient
     end
     return euro_standings
   end
+
+  def get_euro_losers
+    losers_file_path = File.expand_path("../../../losers.txt", __FILE__)
+    losers = []
+    File.readlines(losers_file_path).each do |loser|
+      losers.push(loser.gsub("\n",""))
+    end
+    return losers
+  end
 end

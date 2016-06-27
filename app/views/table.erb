@@ -26,7 +26,9 @@
 
               <tr>
                 <td class="flag"><img src="<%= team.flag %>"></td>
-                <td class="country"><%= team.name %></td>
+                <td class="country  <%= 'eliminated' if team.eliminated %>">
+                  <%= team.name %>
+                </td>
                 <td class="num"><%= team.played %></td>
                 <td class="num"><strong><%= team.points %></strong></td>
               </tr>

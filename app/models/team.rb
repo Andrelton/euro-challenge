@@ -1,6 +1,6 @@
 class Team
   attr_reader :name, :flag
-  attr_accessor :points, :played
+  attr_accessor :points, :played, :eliminated
 
   def add_owner
 
@@ -11,5 +11,6 @@ class Team
     @flag = team_hash['crestURI']
     @played = team_hash['playedGames']
     @points = team_hash['points']
+    @eliminated = false
   end
 end
