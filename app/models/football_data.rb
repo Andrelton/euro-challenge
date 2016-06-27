@@ -15,4 +15,11 @@ class FootballData
     teams = euro_data['standings'].map { |_, group_data| group_data }
     return teams.flatten
   end
+
+  def test
+    self.class.get(
+      "/v1/soccerseasons/424",
+      headers: @headers
+      )
+  end
 end

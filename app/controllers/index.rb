@@ -11,3 +11,7 @@ get '/' do
   @owners = @owners.sort_by { |owner| owner.points }.reverse
   erb :table
 end
+
+get '/test' do
+  FileClient.new.test
+end
