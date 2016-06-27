@@ -1,5 +1,3 @@
-require 'pry-byebug'
-
 class FileClient
 
   def get_euro_points
