@@ -1,5 +1,5 @@
 COUNTRY, PLAYED, POINTS
-Italy,5,12
+Italy,4,9
 Wales,4,9
 Germany,4,10
 Republic of Ireland,4,4
@@ -12,4 +12,4 @@ Slovakia,4,4
 Poland,5,10
 Belgium,4,9
 Switzerland,4,5
-Portugal,4,6
+Portugal,5,9
